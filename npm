@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+docker run \
+  --rm \
+  --interactive \
+  --tty \
+  --workdir /workspace \
+  --volume $(pwd):/workspace \
+  node:alpine \
+  npm "$@"
